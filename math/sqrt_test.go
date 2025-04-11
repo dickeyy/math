@@ -32,3 +32,11 @@ func TestSqrt(t *testing.T) {
 		}
 	}
 }
+
+func TestSqrtCompareMath(t *testing.T) {
+	ours := Sqrt(24)
+	theirs := math.Sqrt(24)
+	if ours != theirs {
+		t.Errorf("Sqrt(24) = %v, want %v", ours, theirs)
+	}
+}
